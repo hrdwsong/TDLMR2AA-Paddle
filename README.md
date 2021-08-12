@@ -1,2 +1,11 @@
-# TDLMR2AA
-Towards Deep Learning Models Resistant to Adversarial Attacks论文复现
+# Towards Deep Learning Models Resistant to Adversarial Attacks（Paddle论文复现）
+
+Towards Deep Learning Models Resistant to Adversarial Attacks (PGD)，ICLR2018，涉及PGD和对抗训练。
+
+本文从优化的角度研究了神经网络的对抗鲁棒性问题。本文提出的方法提供了一个广阔、统一的观点来看待对抗样本的问题。本文提出方法的自然性质使得我们可以可靠的选择训练和攻击神经网络的方法，并且某种程度上是全局的。特别的，本文提出的方法在某种程度上提出了一种可以防御住任意攻击思路。这类方法训练神经网络极大的提高了网络对攻击的抵抗能力。
+
+Contributions：
+
+- 给出了一种提高模型鲁棒性的方案。尽管目标（提出的鞍点问题）是个非凸、非凹的问题，但是最终这个问题还是可以求解的。并且，本文给出了证明，即基于一阶的方法可以可靠的解决这个问题。本文使用的是Projeccted Gradient Descent（PGD）方法，这是一种利用局部一阶信息求解的优化方法（局部线性是成立的）；
+- 对模型容量对鲁棒性影响进行了分析。本文对网络结构在对抗鲁棒问题上的影响，结果表明模型的容量扮演着很重要的角色。为了抵抗对抗攻击，网络的模型容量需要大大的大于仅有干净样本情况下所需要的容量。这表明对抗鲁棒模型的边界可能比正常模型的边界更加复杂；
+- 基于PGD对抗训练给出了一些结果与结论。基于以上的分析，本文使用PGD作为攻击方法生成对抗样本来训练鲁棒模型，训练得到的模型大大提高了模型鲁棒性。
