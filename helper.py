@@ -278,7 +278,7 @@ def full_attack_of_trained_nn_with_hps(net, loss_fn, test_dataset, hps_gen, sele
         title = "resistance {}: {}".format(attack.name, plots_title)
         acc_on_attack = attack.test_attack(
             net,
-            val_dl,
+            test_dl,
             main_title=title,
             plot_results=plot_results,
             save_results_figs=save_figs,
