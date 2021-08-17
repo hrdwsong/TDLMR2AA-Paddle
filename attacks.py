@@ -42,7 +42,7 @@ class Attack:
                 batch_successful_attack = paddle.not_equal(hard_adv_y_preds, ys)
                 num_successful_attacks += batch_successful_attack.numpy().sum().item()
 
-        dataloader_size = len(dataloader) * dataloader.batch_size  # 这里计算不对，最后一个batch可能有余数
+        dataloader_size = len(dataloader) * dataloader.batch_size
         attack_score = num_successful_attacks / (dataloader_size * num_restarts)
         acc_on_constructed_examples = 1.0 - attack_score
 

@@ -289,7 +289,7 @@ def full_attack_of_trained_nn_with_hps(net, loss_fn, test_dataset, hps_gen, sele
             lowest_acc = acc_on_attack
             best_hp = hp
 
-        logger.log_print("%accuracy on attack: {} with hp: {}".format(acc_on_attack, str(hp)))
+        # logger.log_print("%accuracy on attack: {} with hp: {}".format(acc_on_attack, str(hp)))
 
     return best_hp, lowest_acc
 

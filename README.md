@@ -1,11 +1,11 @@
 # 论文复现：Towards Deep Learning Models Resistant to Adversarial Attacks
 
 ## 一、简介
-对抗攻击：攻击者就会通过设计一种有针对性的数值型向量从而让机器学习模型做出误判，这便被称为对抗性攻击，简单来说就是研究如何生成能使网络出错的样本。
+对抗攻击：攻击者会通过设计一种有针对性的数值型向量从而让机器学习模型做出误判，这被称为对抗性攻击，简单来说就是研究如何生成能使网络出错的样本。
 
 根据条件不同，对抗攻击主要可分为：
 - 黑盒攻击与白盒攻击（攻击环境）
-黑箱攻击向目标模型提供了不了解该模型而生成的对抗样本(在测试期间)；白箱攻击假定（对抗者）完全了解目标模型，包括其参数值、体系结构、训练方法，在某些情况下还包括其训练数据。
+黑盒攻击向目标模型提供了不了解该模型而生成的对抗样本(在测试期间)；白盒攻击假定（对抗者）完全了解目标模型，包括其参数值、体系结构、训练方法，在某些情况下还包括其训练数据。
 - 有目标攻击和无目标攻击（攻击的目标）
 无目标攻击指攻击只要使得网络出错即可，目标攻击则不仅要使得网络出错，而且要指定错误的情况
 - 基于梯度的攻击、基于优化的攻击、基于决策面的攻击或者其他（攻击实现方式）
@@ -32,7 +32,7 @@
 
 可以这样理解，文中的方法在客观上等效于随机引入了大量样本参与训练，epsilon邻域越大，参与训练的样本量越大，模型规模也应该同步增加。
 
-论文链接：https://arxiv.org/pdf/1706.06083.pdf
+论文链接：[Towards Deep Learning Models Resistant to Adversarial Attacks](https://arxiv.org/pdf/1706.06083.pdf)
 
 ## 二、复现精度
 
@@ -40,9 +40,9 @@
 
 |任务|本项目精度|原文献精度|
 |----|----|----|
-|PGD-steps100-restarts20-sourceA|92.555%|89.3%|
-|PGD-steps100-restarts20-sourceA‘|97.3955%|95.7%|
-|PGD-steps40-restarts1-sourceB|97.22%|96.4%|
+|PGD-steps100-restarts20-sourceA|92.3%|89.3%|
+|PGD-steps100-restarts20-sourceA‘|95.7%|95.7%|
+|PGD-steps40-restarts1-sourceB|96.6%|96.4%|
 
 超参数配置如下：
 
@@ -64,7 +64,7 @@ MNIST数据集是机器学习领域中非常经典的一个数据集，由60000�
 
 该数据集为美国国家标准与技术研究所（National Institute of Standards and Technology (NIST)）发起整理，一共统计了来自250个不同的人手写数字图片，其中50%是高中生，50%来自人口普查局的工作人员。该数据集的收集目的是希望通过算法，实现对手写数字的识别。
 
-数据集链接：http://yann.lecun.com/exdb/mnist/
+数据集链接：[MNIST](http://yann.lecun.com/exdb/mnist/)
 
 ## 四、环境依赖
 
@@ -80,7 +80,7 @@ MNIST数据集是机器学习领域中非常经典的一个数据集，由60000�
 
 ## 五、快速开始
 
-1、执行以下命令启动训练：
+### 1、执行以下命令启动训练：
 
 `python train.py --net robust --seed 0` 
 
@@ -94,7 +94,7 @@ MNIST数据集是机器学习领域中非常经典的一个数据集，由60000�
 
 建立不同架构的network，运行完毕后，模型参数文件保存在./checkpoints/MNIST/目录下，手动将该文件保存至./checkpoints/MNIST_BlackboxB目录下。
 
-2、执行以下命令进行评估
+### 2、执行以下命令进行评估
 
 `python test.py --method white --num_restarts 20`
 用于白盒测试，对应PGD-steps100-restarts20-sourceA
@@ -114,6 +114,7 @@ MNIST数据集是机器学习领域中非常经典的一个数据集，由60000�
 
 原文献采用的优化器与本项目一致，为Adam优化器，原文献学习率设置为0.0001，本项目经调参发现，
 学习率设置为0.0003能够更快、更好地收敛。不同学习率在训练时，对攻击样本的精度和loss函数如下图所示。
+
 ![img.png](pic/diff_lr.png)
 
 （2）训练时，是否加入原始样本：
@@ -133,13 +134,20 @@ MNIST数据集是机器学习领域中非常经典的一个数据集，由60000�
 
 但总体上，对指标影响很小。
 
-（3）initialer
+（3）initialer：
 
-（4）batch_size
+对模型权重启用不同的初始化方式，会有不同的收敛效果。pytorch默认的参数初始化方式为KaimingNormalize，
+而paddle默认的初始化方式为XavierNormalize。本项目对比了两种不同的初始化方式下，模型LOSS函数和ACC指标的收敛情况，
+如下图所示。
 
-（5）epoch轮次
+![img.png](pic/diff_initial.png)
+
+从图中可以观察到，本项目使用KaimingNormalize初始化方法后，模型的收敛速度更快，最终对抗攻击时给出的精度也更高。
+
+（4）epoch轮次
 
 本项目训练时，采用的epoch轮次为50。LOSS和对抗准确率基本稳定，模型处于收敛状态，如下图所示。
+
 ![img_1.png](pic/img_train_curve.png)
 
 ### 2、复现心得
@@ -169,4 +177,4 @@ MNIST数据集是机器学习领域中非常经典的一个数据集，由60000�
 | 框架版本 | Paddle 2.1.2 |
 | 应用场景 | 对抗训练 |
 | 支持硬件 | GPU、CPU |
-
+|Aistudio地址|https://aistudio.baidu.com/aistudio/projectdetail/2289921?shared=1|

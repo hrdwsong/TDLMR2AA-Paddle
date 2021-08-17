@@ -46,7 +46,7 @@ def start_training(net, _loss_fn, _training_dataset, _testing_dataset, epochs, n
                                                                     fgsm_attack_hps_gen, net_hp, attacks.FGSM,
                                                                     device=device, plot_results=False,
                                                                     save_figs=False, figs_path=plots_folder)
-    logger.log_print("FGSM attack selected hyperparams: {}".format(str(fgsm_hp)))
+    # logger.log_print("FGSM attack selected hyperparams: {}".format(str(fgsm_hp)))
 
     # attack selected net using PGD:
     pgd_hp, pgd_score = helper.full_attack_of_trained_nn_with_hps(net, _loss_fn, _testing_dataset,
@@ -54,7 +54,7 @@ def start_training(net, _loss_fn, _training_dataset, _testing_dataset, epochs, n
                                                                   device=device, plot_results=False,
                                                                   save_figs=False,
                                                                   figs_path=plots_folder)
-    logger.log_print("PGD attack selected hyperparams: {}".format(str(pgd_hp)))
+    # logger.log_print("PGD attack selected hyperparams: {}".format(str(pgd_hp)))
 
     # measure attacks on test
     resistance_results = helper.measure_resistance_on_test(net, net, _loss_fn, _testing_dataset,
