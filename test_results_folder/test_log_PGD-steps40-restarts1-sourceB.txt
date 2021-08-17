@@ -1,4 +1,4 @@
-Time passed [minutes]: 0.00.     execution date (d/m/y): 17/08/2021, 08:44:04
+Time passed [minutes]: 0.00.     execution date (d/m/y): 17/08/2021, 19:10:21
 Time passed [minutes]: 0.00.     Dataset name: MNIST
 Time passed [minutes]: 0.00.     robust model checkpoints folder: .\checkpoints\MNIST_Robust_Model
 Time passed [minutes]: 0.00.     blackbox testing model checkpoints folder: .\checkpoints\MNIST_BlackboxB
@@ -47,6 +47,6 @@ Time passed [minutes]: 0.05.     load blackbox network from .\checkpoints\MNIST_
 Time passed [minutes]: 0.05.     FGMS attack selected hyperparams: {'epsilon': 0.3}
 Time passed [minutes]: 0.05.     PGD attack selected hyperparams: {'alpha': 0.01, 'steps': 40, 'epsilon': 0.3}
 Time passed [minutes]: 0.79.     TEST SCORES of MNIST-ORIGIN-NET:
-Time passed [minutes]: 0.79.     accuracy on test:                         0.9886
-Time passed [minutes]: 0.79.     accuracy on FGSM constructed examples:    0.9753000000000001
-Time passed [minutes]: 0.79.     accuracy on PGD constructed examples:     0.9722
+Time passed [minutes]: 0.79.     accuracy on test:                         0.9864
+Time passed [minutes]: 0.79.     accuracy on FGSM constructed examples:    0.9679
+Time passed [minutes]: 0.79.     accuracy on PGD constructed examples:     0.9664

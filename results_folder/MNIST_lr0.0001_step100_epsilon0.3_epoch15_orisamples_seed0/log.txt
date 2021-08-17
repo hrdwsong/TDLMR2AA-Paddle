@@ -1,0 +1,56 @@
+Time passed [minutes]: 0.00.     execution date (d/m/y): 13/08/2021, 19:49:50
+Time passed [minutes]: 0.00.     Dataset name: MNIST
+Time passed [minutes]: 0.00.     checkpoints folder: .\checkpoints\MNIST
+Time passed [minutes]: 0.00.     save checkpoints: True
+Time passed [minutes]: 0.00.     load checkpoints: False
+Time passed [minutes]: 0.00.     results folder: .\results_folder\MNIST
+Time passed [minutes]: 0.00.     show results:  False
+Time passed [minutes]: 0.00.     save results:  True
+Time passed [minutes]: 0.00.     seed: 0
+Time passed [minutes]: 0.00.     execution device: CUDAPlace(0)
+
+
+
+Time passed [minutes]: 0.10.     Experiment 2 on MNIST-ORIGIN-NET
+Time passed [minutes]: 0.10.     
+Full Train(training on all training dataset) with selected hp: {'lr': 0.0001, 'batch_size': 128, 'lr_scheduler_gamma': 0.95, 'alpha': 0.01, 'steps': 100, 'epsilon': 0.3}
+Time passed [minutes]: 3.25.     Epoch 1. Train adversarial accuracy: 0.105422.Train accuracy: 0.94,  Train loss:  2.66
+
+Time passed [minutes]: 6.40.     Epoch 2. Train adversarial accuracy: 0.231227.Train accuracy: 0.98,  Train loss:  2.22
+
+Time passed [minutes]: 9.62.     Epoch 3. Train adversarial accuracy: 0.280512.Train accuracy: 0.99,  Train loss:  2.06
+
+Time passed [minutes]: 12.85.     Epoch 4. Train adversarial accuracy: 0.314527.Train accuracy: 0.99,  Train loss:  1.95
+
+Time passed [minutes]: 16.10.     Epoch 5. Train adversarial accuracy: 0.339674.Train accuracy: 0.99,  Train loss:  1.86
+
+Time passed [minutes]: 19.35.     Epoch 6. Train adversarial accuracy: 0.365155.Train accuracy: 0.99,  Train loss:  1.78
+
+Time passed [minutes]: 22.59.     Epoch 7. Train adversarial accuracy: 0.389731.Train accuracy: 0.99,  Train loss:  1.71
+
+Time passed [minutes]: 25.85.     Epoch 8. Train adversarial accuracy: 0.406039.Train accuracy: 0.99,  Train loss:  1.65
+
+Time passed [minutes]: 29.09.     Epoch 9. Train adversarial accuracy: 0.422219.Train accuracy: 1.00,  Train loss:  1.60
+
+Time passed [minutes]: 32.34.     Epoch 10. Train adversarial accuracy: 0.437656.Train accuracy: 1.00,  Train loss:  1.56
+
+Time passed [minutes]: 35.59.     Epoch 11. Train adversarial accuracy: 0.450815.Train accuracy: 1.00,  Train loss:  1.51
+
+Time passed [minutes]: 38.83.     Epoch 12. Train adversarial accuracy: 0.467162.Train accuracy: 1.00,  Train loss:  1.47
+
+Time passed [minutes]: 42.05.     Epoch 13. Train adversarial accuracy: 0.480377.Train accuracy: 1.00,  Train loss:  1.43
+
+Time passed [minutes]: 45.23.     Epoch 14. Train adversarial accuracy: 0.495680.Train accuracy: 1.00,  Train loss:  1.39
+
+Time passed [minutes]: 48.42.     Epoch 15. Train adversarial accuracy: 0.508990.Train accuracy: 1.00,  Train loss:  1.35
+
+Time passed [minutes]: 48.42.     training selected hyperparams: {'lr': 0.0001, 'batch_size': 128, 'lr_scheduler_gamma': 0.95, 'alpha': 0.01, 'steps': 100, 'epsilon': 0.3}
+Time passed [minutes]: 48.53.     %accuracy on attack: 0.7738807624113475 with hp: {'epsilon': 0.3}
+Time passed [minutes]: 48.53.     FGSM attack selected hyperparams: {'epsilon': 0.3}
+Time passed [minutes]: 49.48.     %accuracy on attack: 0.495345744680851 with hp: {'alpha': 0.01, 'steps': 100, 'epsilon': 0.3}
+Time passed [minutes]: 49.48.     PGD attack selected hyperparams: {'alpha': 0.01, 'steps': 100, 'epsilon': 0.3}
+Time passed [minutes]: 50.26.     TEST SCORES of MNIST-ORIGIN-NET with PGD adversarial training:
+Time passed [minutes]: 50.26.     accuracy on test:                         0.9931
+Time passed [minutes]: 50.26.     accuracy on FGSM constructed examples:    0.7814
+Time passed [minutes]: 50.26.     accuracy on PGD constructed examples:     0.4989
+Time passed [minutes]: 50.26.     save network to .\checkpoints\MNIST\MNIST-ORIGIN-NET with PGD adversarial training.pdparams

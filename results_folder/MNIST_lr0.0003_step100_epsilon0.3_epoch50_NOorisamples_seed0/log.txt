@@ -115,6 +115,10 @@ Time passed [minutes]: 155.85.     Epoch 49. Train adversarial accuracy: 0.93741
 Time passed [minutes]: 158.87.     Epoch 50. Train adversarial accuracy: 0.939388.Train accuracy: 0.99,  Train loss:  0.18
 
 Time passed [minutes]: 158.87.     training selected hyperparams: {'lr': 0.0003, 'batch_size': 128, 'alpha': 0.01, 'steps': 100, 'epsilon': 0.3}
+Time passed [minutes]: 158.93.     %accuracy on attack: 0.9524 with hp: {'epsilon': 0.3}
+Time passed [minutes]: 158.93.     FGSM attack selected hyperparams: {'epsilon': 0.3}
+Time passed [minutes]: 159.57.     %accuracy on attack: 0.9211 with hp: {'alpha': 0.01, 'steps': 100, 'epsilon': 0.3}
+Time passed [minutes]: 159.57.     PGD attack selected hyperparams: {'alpha': 0.01, 'steps': 100, 'epsilon': 0.3}
 Time passed [minutes]: 160.35.     TEST SCORES of MNIST-ORIGIN-NET with PGD adversarial training:
 Time passed [minutes]: 160.35.     accuracy on test:                         0.9864
 Time passed [minutes]: 160.35.     accuracy on FGSM constructed examples:    0.9524

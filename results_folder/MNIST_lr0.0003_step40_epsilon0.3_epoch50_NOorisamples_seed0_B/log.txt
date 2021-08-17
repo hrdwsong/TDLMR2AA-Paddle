@@ -115,6 +115,10 @@ Time passed [minutes]: 114.03.     Epoch 49. Train adversarial accuracy: 0.96107
 Time passed [minutes]: 116.35.     Epoch 50. Train adversarial accuracy: 0.963053.Train accuracy: 1.00,  Train loss:  0.11
 
 Time passed [minutes]: 116.35.     training selected hyperparams: {'lr': 0.0003, 'batch_size': 128, 'alpha': 0.01, 'steps': 40, 'epsilon': 0.3}
+Time passed [minutes]: 116.36.     %accuracy on attack: 0.9466145833333334 with hp: {'epsilon': 0.3}
+Time passed [minutes]: 116.36.     FGSM attack selected hyperparams: {'epsilon': 0.3}
+Time passed [minutes]: 116.46.     %accuracy on attack: 0.890625 with hp: {'alpha': 0.01, 'steps': 40, 'epsilon': 0.3}
+Time passed [minutes]: 116.46.     PGD attack selected hyperparams: {'alpha': 0.01, 'steps': 40, 'epsilon': 0.3}
 Time passed [minutes]: 117.00.     TEST SCORES of MNIST-B-NET with PGD adversarial training:
 Time passed [minutes]: 117.00.     accuracy on test:                         0.9921
 Time passed [minutes]: 117.00.     accuracy on FGSM constructed examples:    0.9606
