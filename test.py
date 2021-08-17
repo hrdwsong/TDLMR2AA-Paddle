@@ -85,6 +85,8 @@ if __name__ == '__main__':
         black_folder = os.path.join(configs.checkpoints_folder, "MNIST_BlackboxB")
     else:
         black_folder = os.path.join(configs.checkpoints_folder, "MNIST_Robust_Model")
+        experiment_hps_sets["PGD_attack"]["steps"] = [40]
+        experiment_hps_sets["PGD_train"]["steps"] = [40]
 
     logger_path = os.path.join(experiment_results_folder, "log.txt")
     plots_folder = os.path.join(experiment_results_folder, "plots")
