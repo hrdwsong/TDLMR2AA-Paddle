@@ -1,0 +1,126 @@
+Time passed [minutes]: 0.00.     execution date (d/m/y): 16/08/2021, 20:17:04
+Time passed [minutes]: 0.00.     Dataset name: MNIST
+Time passed [minutes]: 0.00.     checkpoints folder: .\checkpoints\MNIST
+Time passed [minutes]: 0.00.     save checkpoints: True
+Time passed [minutes]: 0.00.     load checkpoints: False
+Time passed [minutes]: 0.00.     results folder: .\results_folder\MNIST
+Time passed [minutes]: 0.00.     show results:  False
+Time passed [minutes]: 0.00.     save results:  False
+Time passed [minutes]: 0.00.     seed: 0
+Time passed [minutes]: 0.00.     execution device: CUDAPlace(0)
+
+
+
+Time passed [minutes]: 0.10.     Train model on MNIST-B-NET
+Time passed [minutes]: 0.10.     
+Full Train(training on all training dataset) with selected hp: {'lr': 0.0003, 'batch_size': 128, 'alpha': 0.01, 'steps': 40, 'epsilon': 0.3}
+Time passed [minutes]: 3.57.     Epoch 1. Train adversarial accuracy: 0.541139.Train accuracy: 0.90,  Train loss:  1.27
+
+Time passed [minutes]: 7.04.     Epoch 2. Train adversarial accuracy: 0.767108.Train accuracy: 0.97,  Train loss:  0.67
+
+Time passed [minutes]: 10.52.     Epoch 3. Train adversarial accuracy: 0.834449.Train accuracy: 0.97,  Train loss:  0.49
+
+Time passed [minutes]: 13.98.     Epoch 4. Train adversarial accuracy: 0.865405.Train accuracy: 0.98,  Train loss:  0.40
+
+Time passed [minutes]: 17.45.     Epoch 5. Train adversarial accuracy: 0.882640.Train accuracy: 0.98,  Train loss:  0.35
+
+Time passed [minutes]: 20.92.     Epoch 6. Train adversarial accuracy: 0.893790.Train accuracy: 0.98,  Train loss:  0.32
+
+Time passed [minutes]: 24.39.     Epoch 7. Train adversarial accuracy: 0.901469.Train accuracy: 0.98,  Train loss:  0.29
+
+Time passed [minutes]: 27.85.     Epoch 8. Train adversarial accuracy: 0.906994.Train accuracy: 0.98,  Train loss:  0.28
+
+Time passed [minutes]: 31.32.     Epoch 9. Train adversarial accuracy: 0.911059.Train accuracy: 0.99,  Train loss:  0.27
+
+Time passed [minutes]: 34.77.     Epoch 10. Train adversarial accuracy: 0.915256.Train accuracy: 0.99,  Train loss:  0.25
+
+Time passed [minutes]: 38.25.     Epoch 11. Train adversarial accuracy: 0.918183.Train accuracy: 0.99,  Train loss:  0.25
+
+Time passed [minutes]: 41.73.     Epoch 12. Train adversarial accuracy: 0.920992.Train accuracy: 0.99,  Train loss:  0.23
+
+Time passed [minutes]: 45.20.     Epoch 13. Train adversarial accuracy: 0.923452.Train accuracy: 0.99,  Train loss:  0.23
+
+Time passed [minutes]: 48.66.     Epoch 14. Train adversarial accuracy: 0.924757.Train accuracy: 0.99,  Train loss:  0.22
+
+Time passed [minutes]: 52.13.     Epoch 15. Train adversarial accuracy: 0.926589.Train accuracy: 0.99,  Train loss:  0.22
+
+Time passed [minutes]: 55.61.     Epoch 16. Train adversarial accuracy: 0.930226.Train accuracy: 0.99,  Train loss:  0.21
+
+Time passed [minutes]: 59.10.     Epoch 17. Train adversarial accuracy: 0.932225.Train accuracy: 0.99,  Train loss:  0.20
+
+Time passed [minutes]: 62.56.     Epoch 18. Train adversarial accuracy: 0.932453.Train accuracy: 0.99,  Train loss:  0.20
+
+Time passed [minutes]: 66.03.     Epoch 19. Train adversarial accuracy: 0.934324.Train accuracy: 0.99,  Train loss:  0.19
+
+Time passed [minutes]: 69.49.     Epoch 20. Train adversarial accuracy: 0.936173.Train accuracy: 0.99,  Train loss:  0.19
+
+Time passed [minutes]: 72.96.     Epoch 21. Train adversarial accuracy: 0.937533.Train accuracy: 0.99,  Train loss:  0.19
+
+Time passed [minutes]: 76.43.     Epoch 22. Train adversarial accuracy: 0.938316.Train accuracy: 0.99,  Train loss:  0.18
+
+Time passed [minutes]: 79.90.     Epoch 23. Train adversarial accuracy: 0.941109.Train accuracy: 0.99,  Train loss:  0.18
+
+Time passed [minutes]: 83.37.     Epoch 24. Train adversarial accuracy: 0.941276.Train accuracy: 0.99,  Train loss:  0.17
+
+Time passed [minutes]: 86.84.     Epoch 25. Train adversarial accuracy: 0.942836.Train accuracy: 0.99,  Train loss:  0.17
+
+Time passed [minutes]: 90.31.     Epoch 26. Train adversarial accuracy: 0.943947.Train accuracy: 0.99,  Train loss:  0.16
+
+Time passed [minutes]: 93.78.     Epoch 27. Train adversarial accuracy: 0.943985.Train accuracy: 0.99,  Train loss:  0.16
+
+Time passed [minutes]: 97.25.     Epoch 28. Train adversarial accuracy: 0.946123.Train accuracy: 0.99,  Train loss:  0.16
+
+Time passed [minutes]: 100.72.     Epoch 29. Train adversarial accuracy: 0.946745.Train accuracy: 0.99,  Train loss:  0.16
+
+Time passed [minutes]: 104.18.     Epoch 30. Train adversarial accuracy: 0.948744.Train accuracy: 0.99,  Train loss:  0.15
+
+Time passed [minutes]: 107.65.     Epoch 31. Train adversarial accuracy: 0.948861.Train accuracy: 0.99,  Train loss:  0.15
+
+Time passed [minutes]: 111.13.     Epoch 32. Train adversarial accuracy: 0.949483.Train accuracy: 0.99,  Train loss:  0.15
+
+Time passed [minutes]: 114.60.     Epoch 33. Train adversarial accuracy: 0.949860.Train accuracy: 0.99,  Train loss:  0.14
+
+Time passed [minutes]: 118.06.     Epoch 34. Train adversarial accuracy: 0.950360.Train accuracy: 0.99,  Train loss:  0.14
+
+Time passed [minutes]: 121.53.     Epoch 35. Train adversarial accuracy: 0.952847.Train accuracy: 0.99,  Train loss:  0.14
+
+Time passed [minutes]: 125.01.     Epoch 36. Train adversarial accuracy: 0.953825.Train accuracy: 0.99,  Train loss:  0.13
+
+Time passed [minutes]: 128.48.     Epoch 37. Train adversarial accuracy: 0.952770.Train accuracy: 0.99,  Train loss:  0.14
+
+Time passed [minutes]: 131.94.     Epoch 38. Train adversarial accuracy: 0.954019.Train accuracy: 0.99,  Train loss:  0.13
+
+Time passed [minutes]: 135.40.     Epoch 39. Train adversarial accuracy: 0.954924.Train accuracy: 0.99,  Train loss:  0.13
+
+Time passed [minutes]: 138.86.     Epoch 40. Train adversarial accuracy: 0.956512.Train accuracy: 1.00,  Train loss:  0.13
+
+Time passed [minutes]: 142.33.     Epoch 41. Train adversarial accuracy: 0.956396.Train accuracy: 0.99,  Train loss:  0.13
+
+Time passed [minutes]: 145.80.     Epoch 42. Train adversarial accuracy: 0.956806.Train accuracy: 1.00,  Train loss:  0.12
+
+Time passed [minutes]: 149.27.     Epoch 43. Train adversarial accuracy: 0.958539.Train accuracy: 0.99,  Train loss:  0.12
+
+Time passed [minutes]: 152.73.     Epoch 44. Train adversarial accuracy: 0.958278.Train accuracy: 1.00,  Train loss:  0.12
+
+Time passed [minutes]: 156.20.     Epoch 45. Train adversarial accuracy: 0.959300.Train accuracy: 1.00,  Train loss:  0.12
+
+Time passed [minutes]: 159.68.     Epoch 46. Train adversarial accuracy: 0.960804.Train accuracy: 1.00,  Train loss:  0.11
+
+Time passed [minutes]: 163.14.     Epoch 47. Train adversarial accuracy: 0.960454.Train accuracy: 1.00,  Train loss:  0.11
+
+Time passed [minutes]: 166.61.     Epoch 48. Train adversarial accuracy: 0.962042.Train accuracy: 1.00,  Train loss:  0.11
+
+Time passed [minutes]: 170.07.     Epoch 49. Train adversarial accuracy: 0.962714.Train accuracy: 1.00,  Train loss:  0.11
+
+Time passed [minutes]: 173.53.     Epoch 50. Train adversarial accuracy: 0.962992.Train accuracy: 1.00,  Train loss:  0.11
+
+Time passed [minutes]: 173.53.     training selected hyperparams: {'lr': 0.0003, 'batch_size': 128, 'alpha': 0.01, 'steps': 40, 'epsilon': 0.3}
+Time passed [minutes]: 173.65.     %accuracy on attack: 0.977449024822695 with hp: {'epsilon': 0.3}
+Time passed [minutes]: 173.65.     FGSM attack selected hyperparams: {'epsilon': 0.3}
+Time passed [minutes]: 174.67.     %accuracy on attack: 0.9381094858156028 with hp: {'alpha': 0.01, 'steps': 40, 'epsilon': 0.3}
+Time passed [minutes]: 174.67.     PGD attack selected hyperparams: {'alpha': 0.01, 'steps': 40, 'epsilon': 0.3}
+Time passed [minutes]: 175.41.     TEST SCORES of MNIST-B-NET with PGD adversarial training:
+Time passed [minutes]: 175.41.     accuracy on test:                         0.9912
+Time passed [minutes]: 175.41.     accuracy on FGSM constructed examples:    0.9612
+Time passed [minutes]: 175.41.     accuracy on PGD constructed examples:     0.9178
+Time passed [minutes]: 175.41.     save network to .\checkpoints\MNIST\MNIST-B-NET with PGD adversarial training.pdparams

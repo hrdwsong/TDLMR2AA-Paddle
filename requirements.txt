@@ -1,0 +1,4 @@
+matplotlib==3.3.4
+paddlepaddle_gpu==2.1.2.post110
+numpy==1.19.3
+paddle==1.0.2
