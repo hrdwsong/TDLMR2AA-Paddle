@@ -23,8 +23,8 @@ os.environ['KMP_DUPLICATE_LIB_OK'] = 'TRUE'
 
 
 def start_training(net, _loss_fn, _training_dataset, _testing_dataset, epochs, net_name="", train_attack=None,
-                      attack_training_hps_gen=None, load_checkpoint=False, save_checkpoint=False, show_plots=False,
-                      save_plots=False, show_validation_accuracy_each_epoch=False):
+                   attack_training_hps_gen=None, load_checkpoint=False, save_checkpoint=False, show_plots=False,
+                   save_plots=False, show_validation_accuracy_each_epoch=False):
     hps_gen = net_training_hps_gen
     if train_attack is not None:
         hps_gen = helper.concat_hps_gens(net_training_hps_gen, attack_training_hps_gen)
@@ -42,14 +42,14 @@ def start_training(net, _loss_fn, _training_dataset, _testing_dataset, epochs, n
     logger.log_print("training selected hyperparams: {}".format(str(net_hp)))
 
     # attack selected net using FGSM:
-    fgsm_hp, fgsm_score = helper.full_attack_of_trained_nn_with_hps(net, _loss_fn, _training_dataset,
+    fgsm_hp, fgsm_score = helper.full_attack_of_trained_nn_with_hps(net, _loss_fn, _testing_dataset,
                                                                     fgsm_attack_hps_gen, net_hp, attacks.FGSM,
                                                                     device=device, plot_results=False,
                                                                     save_figs=False, figs_path=plots_folder)
     logger.log_print("FGSM attack selected hyperparams: {}".format(str(fgsm_hp)))
 
     # attack selected net using PGD:
-    pgd_hp, pgd_score = helper.full_attack_of_trained_nn_with_hps(net, _loss_fn, _training_dataset,
+    pgd_hp, pgd_score = helper.full_attack_of_trained_nn_with_hps(net, _loss_fn, _testing_dataset,
                                                                   pgd_attack_hps_gen, net_hp, attacks.PGD,
                                                                   device=device, plot_results=False,
                                                                   save_figs=False,
@@ -100,17 +100,14 @@ def start_training(net, _loss_fn, _training_dataset, _testing_dataset, epochs, n
 def build_robust_network(net, _loss_fn, _training_dataset, _testing_dataset, adversarial_epochs,
                          net_name="", load_checkpoint=False, save_checkpoint=False, show_plots=False, save_plots=False,
                          show_validation_accuracy_each_epoch=False):
-    """
-     Apply adversarial training with FGSM and PGD and then analyze it. the parameters are the same as in experiment 1.
-    """
     adversarial_epochs.restart()
     pgd_robust_net = net
     start_training(pgd_robust_net, _loss_fn, _training_dataset, _testing_dataset, adversarial_epochs,
-                      net_name="{} with PGD adversarial training".format(net_name), train_attack=attacks.PGD,
-                      attack_training_hps_gen=pgd_training_hps_gen,
-                      load_checkpoint=load_checkpoint, save_checkpoint=save_checkpoint, show_plots=show_plots,
-                      save_plots=save_plots,
-                      show_validation_accuracy_each_epoch=show_validation_accuracy_each_epoch)
+                   net_name="{} with PGD adversarial training".format(net_name), train_attack=attacks.PGD,
+                   attack_training_hps_gen=pgd_training_hps_gen,
+                   load_checkpoint=load_checkpoint, save_checkpoint=save_checkpoint, show_plots=show_plots,
+                   save_plots=save_plots,
+                   show_validation_accuracy_each_epoch=show_validation_accuracy_each_epoch)
 
 
 if __name__ == '__main__':

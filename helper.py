@@ -246,7 +246,7 @@ def full_train_of_nn_with_hps(net, loss_fn, train_dataset, hps_gen, epochs, devi
     return best_net_state_dict, net_best_hp
 
 
-def full_attack_of_trained_nn_with_hps(net, loss_fn, train_dataset, hps_gen, selected_nn_hp, attack_method, device=None,
+def full_attack_of_trained_nn_with_hps(net, loss_fn, test_dataset, hps_gen, selected_nn_hp, attack_method, device=None,
                                        plots_title="", plot_results=False, save_figs=False, figs_path=None):
     """
     hyperparameter search in order to find the hp with highest attack score (i.e. prob to successfully attack).
@@ -265,7 +265,8 @@ def full_attack_of_trained_nn_with_hps(net, loss_fn, train_dataset, hps_gen, sel
     :return: best_hp, best_score (approximately prob to successfully attack)
     """
     hps_gen.restart()
-    train_dl, val_dl = datasets.get_train_val_dls(train_dataset, selected_nn_hp["batch_size"])
+    # train_dl, val_dl = datasets.get_train_val_dls(train_dataset, selected_nn_hp["batch_size"])
+    test_dl = DataLoader(test_dataset, batch_size=100)
 
     best_hp, lowest_acc = None, 1.0
     while True:
