@@ -1,4 +1,4 @@
-Time passed [minutes]: 0.00.     execution date (d/m/y): 17/08/2021, 18:56:54
+Time passed [minutes]: 0.00.     execution date (d/m/y): 18/08/2021, 09:08:39
 Time passed [minutes]: 0.00.     Dataset name: MNIST
 Time passed [minutes]: 0.00.     robust model checkpoints folder: .\checkpoints\MNIST_Robust_Model
 Time passed [minutes]: 0.00.     blackbox testing model checkpoints folder: .\checkpoints\MNIST_BlackboxA
@@ -10,8 +10,8 @@ Time passed [minutes]: 0.00.     execution device: CUDAPlace(0)
 
 
 Time passed [minutes]: 0.01.     Testing on blackA box
-Time passed [minutes]: 0.05.     robust Network architecture:
-Time passed [minutes]: 0.05.     CNN_MNIST_OriginNet(
+Time passed [minutes]: 0.06.     robust Network architecture:
+Time passed [minutes]: 0.06.     CNN_MNIST_OriginNet(
   (cnn): Sequential(
     (0): Conv2D(1, 32, kernel_size=[5, 5], padding=2, data_format=NCHW)
     (1): ReLU()
@@ -26,8 +26,8 @@ Time passed [minutes]: 0.05.     CNN_MNIST_OriginNet(
     (2): Linear(in_features=1024, out_features=10, dtype=float32)
   )
 )
-Time passed [minutes]: 0.05.     blackbox Network architecture:
-Time passed [minutes]: 0.05.     CNN_MNIST_OriginNet(
+Time passed [minutes]: 0.06.     blackbox Network architecture:
+Time passed [minutes]: 0.06.     CNN_MNIST_OriginNet(
   (cnn): Sequential(
     (0): Conv2D(1, 32, kernel_size=[5, 5], padding=2, data_format=NCHW)
     (1): ReLU()
@@ -42,11 +42,11 @@ Time passed [minutes]: 0.05.     CNN_MNIST_OriginNet(
     (2): Linear(in_features=1024, out_features=10, dtype=float32)
   )
 )
-Time passed [minutes]: 0.05.     load robust network from .\checkpoints\MNIST_Robust_Model\MNIST-ORIGIN-NET with PGD adversarial training.pdparams
-Time passed [minutes]: 0.05.     load blackbox network from .\checkpoints\MNIST_BlackboxA\MNIST-ORIGIN-NET with PGD adversarial training.pdparams
-Time passed [minutes]: 0.05.     FGMS attack selected hyperparams: {'epsilon': 0.3}
-Time passed [minutes]: 0.05.     PGD attack selected hyperparams: {'alpha': 0.01, 'steps': 100, 'epsilon': 0.3}
-Time passed [minutes]: 12.60.     TEST SCORES of MNIST-ORIGIN-NET:
-Time passed [minutes]: 12.60.     accuracy on test:                         0.9864
-Time passed [minutes]: 12.60.     accuracy on FGSM constructed examples:    0.9663
-Time passed [minutes]: 12.60.     accuracy on PGD constructed examples:     0.95651
+Time passed [minutes]: 0.06.     load robust network from .\checkpoints\MNIST_Robust_Model\MNIST-ORIGIN-NET with PGD adversarial training.pdparams
+Time passed [minutes]: 0.06.     load blackbox network from .\checkpoints\MNIST_BlackboxA\MNIST-ORIGIN-NET with PGD adversarial training.pdparams
+Time passed [minutes]: 0.06.     FGMS attack selected hyperparams: {'epsilon': 0.3}
+Time passed [minutes]: 0.06.     PGD attack selected hyperparams: {'alpha': 0.01, 'steps': 100, 'epsilon': 0.3}
+Time passed [minutes]: 12.62.     TEST SCORES of MNIST-ORIGIN-NET:
+Time passed [minutes]: 12.62.     accuracy on test:                         0.9864
+Time passed [minutes]: 12.62.     accuracy on FGSM constructed examples:    0.9695
+Time passed [minutes]: 12.62.     accuracy on PGD constructed examples:     0.95889
