@@ -41,7 +41,7 @@
 |任务|本项目精度|原文献精度|
 |----|----|----|
 |PGD-steps100-restarts20-sourceA|92.3%|89.3%|
-|PGD-steps100-restarts20-sourceA‘|95.7%|95.7%|
+|PGD-steps100-restarts20-sourceA‘|95.9%|95.7%|
 |PGD-steps40-restarts1-sourceB|96.6%|96.4%|
 
 超参数配置如下：
